@@ -1,36 +1,19 @@
-const HtmlWebpackPlugin = require('html-webpack-plugin')
-const WebpackBar = require('webpackbar')
 const paths = require('./paths')
-const {VueLoaderPlugin} = require("vue-loader");
-
+const HtmlWebpackPlugin = require('html-webpack-plugin');
 module.exports = {
-  // Where webpack looks to start building the bundle
-  entry: [paths.examples + '/index.js'],
-  // Determine how modules within the project are treated
+  entry:[paths.examples + '/index.js'],
+  output: {
+    path: paths.demo,
+    filename: '[name].[hash].js'
+  },
   module: {
     rules: [
-      { test: /\.vue$/, use: ['vue-loader']},
-      // JavaScript: Use Babel to transpile JavaScript files
-      { test: /\.js$/, use: ['babel-loader'], exclude: /node_modules/},
-    ],
+
+    ]
   },
-  // Customize the webpack build process
   plugins: [
-    new WebpackBar(),
-    new VueLoaderPlugin(),
     new HtmlWebpackPlugin({
-      title: 'examples',
-      template: paths.examples + '/index.html', // template file
-      filename: 'index.html', // output file
+      template: path.template + 'index.html'
     })
-  ],
-  context: paths.context,
-  resolve: {
-    modules: [paths.src, 'node_modules', paths.examples],
-    extensions: ['.js', '.jsx', '.json'],
-    alias: {
-      '@/': paths.src,
-      assets: paths.public,
-    },
-  }
-}
+  ]
+};

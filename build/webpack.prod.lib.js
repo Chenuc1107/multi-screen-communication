@@ -28,7 +28,7 @@ module.exports = {
         ],
       },
       // Images: Copy image files to build folder
-      { test: /\.(?:ico|gif|png|jpg|jpeg)$/,
+      { test: /\.(?:ico|gif|png|jpg|jpeg|svg|)$/,
         type: 'asset',
         parser: {
           dataUrlCondition: {
@@ -37,10 +37,11 @@ module.exports = {
         },
         generator: {
           filename: 'assets/images/[name].[hash:6][ext]',
+          publicPath: './'
         }
       },
       // Fonts and SVGs: Inline files
-      { test: /\.(woff(2)?|eot|ttf|otf|svg|)$/,
+      { test: /\.(woff(2)?|eot|ttf|otf|)$/,
         type: 'asset',
         generator: {
           filename: 'assets/font/[name].[hash:6][ext]',

@@ -3,12 +3,12 @@
 </template>
 
 <script>
-import test from '../../lib/index.js';
+// import test from '../../lib/index.js';
 
 export default {
   name: "home",
   mounted() {
-    console.log(test)
+    // console.log(test)
   }
 }
 </script>

@@ -5,7 +5,7 @@ src/assets
 # 忽略地图目录的语法检查
 src/common/mapTool
 # 忽略public目录下文件的语法检查
-
+/build/
 public
 ms-config-server
 mockServe
