@@ -6,6 +6,7 @@ src/assets
 src/common/mapTool
 # 忽略public目录下文件的语法检查
 /build/
+demo
 public
 ms-config-server
 mockServe
