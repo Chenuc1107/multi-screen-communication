@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunk=self.webpackChunk||[]).push([[827],{827:(n,t,u)=>{u.r(t),u.d(t,{default:()=>e});const e=(0,u(810).Z)({name:"about"},(function(){return(0,this._self._c)("div",[this._v("\r\n    about\r\n  ")])}),[],!1,null,"50cba0cc",null).exports}}]);

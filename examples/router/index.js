@@ -1,19 +1,19 @@
-import Vue from 'vue';
-import router from 'vue-router';
-Vue.use(router)
+import Vue from 'vue'
+import Router from 'vue-router'
+Vue.use(Router)
 const routes = [
   {
-    path:'/',
-    name:'home',
-    component:()=> import('../views/home.vue')
+    path: '/',
+    name: 'home',
+    component: () => import('../views/home.vue')
   },
   {
-    path:'/about',
-    name:'about',
-    component:()=> import('../views/about.vue')
+    path: '/about',
+    name: 'about',
+    component: () => import('../views/about.vue')
   }
 ]
-const route = new router({
+const route = new Router({
   routes
 })
 

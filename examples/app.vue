@@ -1,5 +1,8 @@
 <template>
-  <div id="app" class="dragon-app">
+  <div
+    id="app"
+    class="dragon-app"
+  >
     app
     <router-view />
   </div>
@@ -7,7 +10,7 @@
 
 <script>
 export default {
-  name: "app",
+  name: 'App',
   mounted() {
     console.log(`vue init`)
   }
